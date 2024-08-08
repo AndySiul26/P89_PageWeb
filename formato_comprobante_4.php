@@ -126,14 +126,14 @@
             // Rotulo del cliente
             $this->SetFont('DejaVu', 'B', 8);
             
-            $this->MultiCell(w: ANCHO_ROTULO_TABLA_ORDEN, h: $alto_txt, txt: $rotulo, border: 1, align: 'L', fill: true);
+            $this->MultiCell(ANCHO_ROTULO_TABLA_ORDEN, $alto_txt,  $rotulo,  1, 'L',  true);
         
             // Mover la posición X para la siguiente celda en la misma fila
             $this->ante_x += ANCHO_ROTULO_TABLA_ORDEN;
             $this->SetXY($this->ante_x, $this->ante_y);
             // Campo del cliente
             $this->SetFont('DejaVu', '', 8);
-            $this->MultiCell(w: ANCHO_ROTULO_TABLA_ORDEN, h: ALTO_ROTULO_TABLA_ORDEN, txt: $valor, border: 1, align: 'C', fill: true);
+            $this->MultiCell(ANCHO_ROTULO_TABLA_ORDEN,  ALTO_ROTULO_TABLA_ORDEN,  $valor,  1,  'C',  true);
             // Guardar posición X 
             $this->ante_x += ANCHO_ROTULO_TABLA_ORDEN;
             
